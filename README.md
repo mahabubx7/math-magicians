@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [CRA] <a name="about-project"></a>
+# 📖 [Math Magicians] <a name="about-project"></a>
 Math Magicians is a react app created with `create-react-app`.
 
 ## 🛠 Built With <a name="built-with">`HTML/CSS`,`Webpack`, and `React`</a>
