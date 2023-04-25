@@ -1,5 +1,5 @@
 import './calculator.css';
-import PropTypes from 'prop-types';
+import Button from './Button';
 
 function Calculator() {
   return (
@@ -29,20 +29,5 @@ function Calculator() {
     </div>
   );
 }
-
-function Button({ content, className }) {
-  return (
-    <button type="button" className={className}>{content}</button>
-  );
-}
-
-Button.defaultProps = {
-  className: '',
-};
-
-Button.propTypes = {
-  content: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
 
 export default Calculator;

@@ -1,6 +1,4 @@
 import Calculator from './components/Calculator';
-// import logo from './logo.svg';
-// import './App.css';
 
 function App() {
   return (
