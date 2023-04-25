@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h2><b>Create React App: exercise</b></h2>
+  <h2><b>Math Magicians</b></h2>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -9,7 +9,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#table-of-contents)
-- [📖 \[Js capstone project\] ](#exercise-repo)
+- [📖 \[Math Magicians\] ](#exercise-repo)
   - [Key Features ](#key-features)
   - [💻 Getting Started ](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -30,7 +30,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [CRA] <a name="about-project"></a>
-Create React App: exercise
+Math Magicians is a react app created with `create-react-app`.
 
 ## 🛠 Built With <a name="built-with">`HTML/CSS`,`Webpack`, and `React`</a>
 
@@ -139,7 +139,7 @@ Deployed in `Github Pages`. [Live Preview](https://mahabubx7.github.io/math-magi
 
 - GitHub: [@mahabubx7](https://github.com/mahabubx7)
 - Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/mahabubx7)
+- LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -184,8 +184,10 @@ I would like to thank... themealdb.com
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
 - **[Why Webpack?]**
-
   - [It is a static bundler. It helps us to bundle a big and massy web-pages project into a bundled and gives us optimized performance. ]
+
+- **[What is React?]**
+  - [React is a frontend library for developing SPA. It is the most popular and widely used in 2023 in frontend development.]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,6 +195,6 @@ I would like to thank... themealdb.com
 
 ## 📝 License <a name="license"></a>
 
-This project is [CC License](./LICENSE) licensed.
+This project is [MIT License](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
