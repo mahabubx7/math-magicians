@@ -45,10 +45,10 @@ button:nth-child(4n) {
   background-color: var(--orange);
 }
 
-#zero {
+.zero {
   grid-column: span 2;
 }
 
-#equal {
+.equal {
   background-color: var(--orange);
 }

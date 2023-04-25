@@ -1,32 +1,48 @@
 import './calculator.css';
+import PropTypes from 'prop-types';
 
 function Calculator() {
   return (
     <div className="calculator">
       <div className="console">0</div>
       <div className="btn-group">
-        <button type="button" id="ac">ac</button>
-        <button type="button" id="plusMinus">{'\u00B1'}</button>
-        <button type="button" id="percentage">{'\u0025'}</button>
-        <button type="button" id="divide">{'\u00f7'}</button>
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button type="button" id="multiply">{'\u2715'}</button>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button type="button" id="minus">{'\u2212'}</button>
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button" id="plus">{'\u002b'}</button>
-        <button type="button" id="zero">0</button>
-        <button type="button" id="dot">{'\u22c5'}</button>
-        <button type="button" id="equal">{'\u003d'}</button>
+        <Button content="ac" />
+        <Button content={'\u00B1'} />
+        <Button content={'\u0025'} />
+        <Button content={'\u00f7'} />
+        <Button content="7" />
+        <Button content="8" />
+        <Button content="9" />
+        <Button content={'\u2715'} />
+        <Button content="4" />
+        <Button content="5" />
+        <Button content="6" />
+        <Button content={'\u2212'} />
+        <Button content="1" />
+        <Button content="2" />
+        <Button content="3" />
+        <Button content={'\u002b'} />
+        <Button content="0" className="zero" />
+        <Button content={'\u22c5'} />
+        <Button content={'\u003d'} className="equal" />
       </div>
     </div>
   );
 }
+
+function Button({ content, className }) {
+  return (
+    <button type="button" className={className}>{content}</button>
+  );
+}
+
+Button.defaultProps = {
+  className: '',
+};
+
+Button.propTypes = {
+  content: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
 
 export default Calculator;
