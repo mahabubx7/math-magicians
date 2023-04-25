@@ -1,0 +1,54 @@
+:root {
+  --gray: #858694;
+  --dark: #1c1003;
+  --orange: #f5913e;
+  --lightGray: #e0e0e0;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  color: var(--dark);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.console {
+  display: block;
+  text-align: right;
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  outline: 0;
+  border: 1px solid var(--gray);
+  padding: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: var(--lightGray);
+  color: var(--dark);
+}
+
+button:nth-child(4n) {
+  background-color: var(--orange);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.equal {
+  background-color: var(--orange);
+}
