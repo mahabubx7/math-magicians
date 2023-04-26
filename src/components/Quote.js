@@ -6,6 +6,7 @@ const API = 'https://api.api-ninjas.com/v1/quotes?category=computers';
 
 function Quote() {
   const [quote, setQuote] = useState(null);
+  const [state, setState] = useState({ status: 'loading', error: null });
 
   useEffect(() => {
     let ignore = false;
@@ -21,8 +22,9 @@ function Quote() {
 
         const data = await response.json();
         setQuote(data[0]);
+        setState({ ...state, status: 'loaded', error: null });
       } catch (err) {
-        console.error(err);
+        setState({ ...state, status: 'error', error: err });
       }
     }
 
@@ -31,13 +33,19 @@ function Quote() {
     return () => {
       ignore = true;
     };
-  }, []);
+  }, [state]);
 
   return (
     <blockquote>
-      <p>{quote?.quote}</p>
-      <br />
-      <b>{`-- ${quote?.author}`}</b>
+      {state.status === 'loading' ? (
+        <p>loading</p>
+      ) : (
+        <>
+          <p>{quote?.quote}</p>
+          <br />
+          <b>{`-- ${quote?.author}`}</b>
+        </>
+      )}
     </blockquote>
   );
 }
