@@ -3,33 +3,49 @@ import { useState } from 'react';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
+const buttonKeys = [
+  'AC', '+/-', '%', '÷',
+  '7', '8', '9', 'x',
+  '4', '5', '6', '-',
+  '1', '2', '3', '+',
+  '0', '.', '=',
+];
+
 function Calculator() {
-  const [ans, setAns] = useState(0);
-  const updateAns = (result) => setAns(result);
+  const [obj, setObj] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
+
+  const handleBtn = (btn) => setObj(calculate(obj, btn));
+
+  const handleClassName = (btn) => {
+    if (btn === '0') return 'zero';
+    if (btn === '=') return 'equal';
+    return '';
+  };
 
   return (
     <div className="calculator">
-      <div className="console">{ans}</div>
+      <div className="console">
+        <p>
+          {obj?.total}
+          {' '}
+          {obj?.operation}
+          {' '}
+          {obj?.next}
+        </p>
+      </div>
       <div className="btn-group">
-        <Button content="ac" handle={() => updateAns(0)} />
-        <Button content={'\u00B1'} handle={() => calculate({}, 'AC')} />
-        <Button content={'\u0025'} handle={() => calculate({}, 'AC')} />
-        <Button content={'\u00f7'} handle={() => calculate({}, 'AC')} />
-        <Button content="7" handle={() => calculate({}, 'AC')} />
-        <Button content="8" handle={() => calculate({}, 'AC')} />
-        <Button content="9" handle={() => calculate({}, 'AC')} />
-        <Button content={'\u2715'} handle={() => calculate({}, 'AC')} />
-        <Button content="4" handle={() => calculate({}, 'AC')} />
-        <Button content="5" handle={() => calculate({}, 'AC')} />
-        <Button content="6" handle={() => calculate({}, 'AC')} />
-        <Button content={'\u2212'} handle={() => calculate({}, 'AC')} />
-        <Button content="1" handle={() => calculate({}, 'AC')} />
-        <Button content="2" handle={() => calculate({}, 'AC')} />
-        <Button content="3" handle={() => calculate({}, 'AC')} />
-        <Button content={'\u002b'} handle={() => calculate({}, 'AC')} />
-        <Button content="0" className="zero" handle={() => calculate({}, 'AC')} />
-        <Button content={'\u22c5'} handle={() => calculate({}, 'AC')} />
-        <Button content={'\u003d'} className="equal" handle={() => calculate({}, 'AC')} />
+        {buttonKeys.map((btn) => (
+          <Button
+            key={btn}
+            className={handleClassName(btn)}
+            content={btn}
+            handle={() => handleBtn(btn)}
+          />
+        ))}
       </div>
     </div>
   );

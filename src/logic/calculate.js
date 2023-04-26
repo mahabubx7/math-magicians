@@ -7,7 +7,7 @@ function isNumber(str) {
 export default function calculate(obj, btnName) {
   if (btnName === 'AC') {
     return {
-      total: null,
+      total: 0,
       next: null,
       operation: null,
     };
