@@ -10,8 +10,8 @@
 
 - [📗 Table of Contents](#table-of-contents)
 - [📖 \[Math Magicians\] ](#exercise-repo)
-  - [Key Features ](#key-features)
-  - [💻 Getting Started ](#getting-started)
+  - [Key Features](#key-features)
+  - [💻 Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -19,17 +19,18 @@
     - [Run tests](#run-tests)
     - [Live Preview](#live-preview)
     - [Deployment](#deployment)
-  - [👥 Authors ](#authors)
-  - [🔭 Future Features ](#future-features)
-  - [🤝 Contributing ](#contributing)
-  - [⭐️ Show your support ](#️show-your-support)
-  - [🙏 Acknowledgments ](#acknowledgments)
-  - [❓ FAQ (OPTIONAL) ](#faq-optional)
-  - [📝 License ](#license)
+  - [👥 Authors](#authors)
+  - [🔭 Future Features](#future-features)
+  - [🤝 Contributing](#contributing)
+  - [⭐️ Show your support](#️show-your-support)
+  - [🙏 Acknowledgments](#acknowledgments)
+  - [❓ FAQ (OPTIONAL)](#faq-optional)
+  - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Math Magicians] <a name="about-project"></a>
+
 Math Magicians is a react app created with `create-react-app`.
 
 ## 🛠 Built With <a name="built-with">`HTML/CSS`,`Webpack`, and `React`</a>
@@ -116,14 +117,21 @@ Execute this:
 
 To run tests, run the following command:
 
-Testing with Lint-checks:
+For running tests:
 
 ```sh
   npm test
 ```
 
+For running Linter-checks:
+
+```sh
+  npm run lint
+```
+
 ### Live Preview
-Not available yet.
+
+Not available yet. [It's coming soon.]
 
 ### Deployment
 
@@ -141,14 +149,13 @@ Deployed in `Github Pages`. [Live Preview](https://mahabubx7.github.io/math-magi
 - Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
 - LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Components & Props]**
+- [x] **[Components & Props]**
 - [ ] **[React Router]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -175,7 +182,7 @@ If you like this project... please give it a start.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank... themealdb.com
+I would like to thank... the microverseinc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,30 +1,51 @@
 import './calculator.css';
+import { useState } from 'react';
 import Button from './Button';
+import calculate from '../logic/calculate';
+
+const buttonKeys = [
+  'AC', '+/-', '%', '÷',
+  '7', '8', '9', 'x',
+  '4', '5', '6', '-',
+  '1', '2', '3', '+',
+  '0', '.', '=',
+];
 
 function Calculator() {
+  const [obj, setObj] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
+
+  const handleBtn = (btn) => setObj(calculate(obj, btn));
+
+  const handleClassName = (btn) => {
+    if (btn === '0') return 'zero';
+    if (btn === '=') return 'equal';
+    return '';
+  };
+
   return (
     <div className="calculator">
-      <div className="console">0</div>
+      <div className="console">
+        <p>
+          {obj?.total}
+          {' '}
+          {obj?.operation}
+          {' '}
+          {obj?.next}
+        </p>
+      </div>
       <div className="btn-group">
-        <Button content="ac" />
-        <Button content={'\u00B1'} />
-        <Button content={'\u0025'} />
-        <Button content={'\u00f7'} />
-        <Button content="7" />
-        <Button content="8" />
-        <Button content="9" />
-        <Button content={'\u2715'} />
-        <Button content="4" />
-        <Button content="5" />
-        <Button content="6" />
-        <Button content={'\u2212'} />
-        <Button content="1" />
-        <Button content="2" />
-        <Button content="3" />
-        <Button content={'\u002b'} />
-        <Button content="0" className="zero" />
-        <Button content={'\u22c5'} />
-        <Button content={'\u003d'} className="equal" />
+        {buttonKeys.map((btn) => (
+          <Button
+            key={btn}
+            className={handleClassName(btn)}
+            content={btn}
+            handle={() => handleBtn(btn)}
+          />
+        ))}
       </div>
     </div>
   );
