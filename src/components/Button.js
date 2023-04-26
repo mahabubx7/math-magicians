@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
 
-function Button({ content, className }) {
+function Button({ content, className, handle }) {
   return (
-    <button type="button" className={className}>{content}</button>
+    <button
+      type="button"
+      onClick={handle}
+      className={className}
+    >
+      { content }
+    </button>
   );
 }
 
@@ -12,6 +18,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   content: PropTypes.string.isRequired,
+  handle: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
 
