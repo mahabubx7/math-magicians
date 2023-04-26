@@ -28,7 +28,7 @@ function Quote() {
       }
     }
 
-    if (!ignore) fetchQuote();
+    if (!ignore && state.status === 'loading') fetchQuote();
 
     return () => {
       ignore = true;
