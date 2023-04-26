@@ -134,8 +134,8 @@ For running Linter-checks:
 Not available yet. [It's coming soon.]
 
 ### Deployment
-
-Deployed in `Github Pages`. [Live Preview](https://mahabubx7.github.io/math-magicians/)
+This section will be updated later (when deploy task will come).
+<!-- Deployed in `Github Pages`. [Live Preview](https://mahabubx7.github.io/math-magicians/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
