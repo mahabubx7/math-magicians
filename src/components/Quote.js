@@ -1,39 +1,45 @@
 import './quote.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const ApiKey = '6ey4sjw8A4R8BYLLnWiPUQ==H7kGL6nxt49Ho8lY';
 const API = 'https://api.api-ninjas.com/v1/quotes?category=computers';
 
 function Quote() {
+  const fetchPermission = useRef(true);
   const [quote, setQuote] = useState(null);
   const [state, setState] = useState({ status: 'loading', error: null });
+  const updateState = (obj) => setState({ ...state, ...obj });
+
+  async function fetchQuote() {
+    try {
+      const response = await fetch(API, {
+        method: 'GET',
+        headers: {
+          'X-Api-Key': ApiKey,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+      setQuote(data[0]);
+      updateState({ status: 'loaded', error: null });
+    } catch (err) {
+      updateState({ status: 'error', error: err });
+    }
+  }
 
   useEffect(() => {
-    let ignore = false;
-    async function fetchQuote() {
-      try {
-        const response = await fetch(API, {
-          method: 'GET',
-          headers: {
-            'X-Api-Key': ApiKey,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        const data = await response.json();
-        setQuote(data[0]);
-        setState({ ...state, status: 'loaded', error: null });
-      } catch (err) {
-        setState({ ...state, status: 'error', error: err });
-      }
+    if (fetchPermission.current) {
+      fetchQuote();
+      fetchPermission.current = false;
     }
+  });
 
-    if (!ignore && state.status === 'loading') fetchQuote();
-
-    return () => {
-      ignore = true;
-    };
-  }, [state]);
+  if (state.error) {
+    return (
+      <blockquote>Error! Something went wrong!</blockquote>
+    );
+  }
 
   return (
     <blockquote>
