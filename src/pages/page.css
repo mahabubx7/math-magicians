@@ -1,0 +1,46 @@
+.container,
+.page-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  text-transform: capitalize;
+}
+
+header .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 0 0.5rem;
+}
+
+header ul li {
+  padding-right: 0.5rem;
+  border-right: 1px solid #3b3b3b;
+}
+
+header ul li:last-child {
+  border-right: none;
+}
+
+header ul a {
+  color: #3b3b3b;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.calculator-page {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  align-items: start;
+}

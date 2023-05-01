@@ -1,7 +1,9 @@
+import Quote from '../components/Quote';
+
 function QuotePage() {
   return (
     <>
-      <p>Quote Page</p>
+      <Quote />
     </>
   );
 }

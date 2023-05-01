@@ -1,8 +1,11 @@
+import Calculator from '../components/Calculator';
+
 function CalculatorPage() {
   return (
-    <>
-      <p>Calculator Page</p>
-    </>
+    <div className="calculator-page">
+      <h2>Do some math here.</h2>
+      <Calculator />
+    </div>
   );
 }
 
