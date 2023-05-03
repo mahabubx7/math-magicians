@@ -35,24 +35,20 @@ function Quote() {
     }
   });
 
-  if (state.error) {
-    return (
-      <blockquote>Error! Something went wrong!</blockquote>
-    );
-  }
+  if (state.error) return <p>Error! Something went wrong!</p>;
 
   return (
-    <blockquote>
+    <>
       {state.status === 'loading' ? (
         <p>loading</p>
       ) : (
-        <>
-          <p>{quote?.quote}</p>
+        <blockquote>
+          {quote?.quote}
           <br />
           <b>{`-- ${quote?.author}`}</b>
-        </>
+        </blockquote>
       )}
-    </blockquote>
+    </>
   );
 }
 

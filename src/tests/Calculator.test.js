@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import Calculator from '../components/Calculator';
 
-describe('Tests for Calculator', () => {
+describe('Tests for Calculator component', () => {
   test('should render calculator component', () => {
     render(<Calculator />);
 
