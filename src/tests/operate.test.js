@@ -1,4 +1,4 @@
-import operate from "../logic/operate";
+import operate from '../logic/operate';
 
 describe('Unit tests for operate.js', () => {
   test('should return as string only', () => {
