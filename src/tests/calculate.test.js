@@ -37,4 +37,17 @@ describe('Unit tests for calculate.js', () => {
       operation: null,
     });
   });
+
+  test('should return a number with adot', () => {
+    const obj = {
+      total: '3',
+      next: null,
+      operation: null,
+    };
+    expect(calculate(obj, '.')).toStrictEqual({
+      total: '3',
+      next: '3.',
+      operation: null,
+    });
+  });
 });

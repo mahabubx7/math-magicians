@@ -148,6 +148,11 @@ Deployed in `Github Pages`. [Live Preview](https://math-magicians-mx7.onrender.c
 - Twitter: [@mahabub\_\_7](https://twitter.com/mahabub__7)
 - LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
 
+👤 **IRADUKUNDA Pacific Rugwizangoga**
+
+- GitHub: [@githubhandle](https://github.com/rugwizangoga)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/iradukunda-pacific-rugwizangoga)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
