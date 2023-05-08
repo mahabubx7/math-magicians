@@ -29,7 +29,7 @@ function Calculator() {
   return (
     <div className="calculator">
       <div className="console">
-        <p>
+        <p data-testid="output">
           {obj?.total}
           {' '}
           {obj?.operation}
